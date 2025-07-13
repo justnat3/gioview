@@ -476,7 +476,7 @@ func (e *Editor) command(gtx layout.Context, k key.Event) (EditorEvent, bool) {
 	if gtx.Locale.Direction.Progression() == system.TowardOrigin {
 		direction = -1
 	}
-	moveByWord := k.Modifiers.Contain(key.ModShortcutAlt)
+	moveByWord := k.Modifiers.Contain(key.ModCtrl)
 	selAct := selectionClear
 	if k.Modifiers.Contain(key.ModShift) {
 		selAct = selectionExtend
